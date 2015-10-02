@@ -1,5 +1,5 @@
-import urllib
 import json
+import requests
 
 class Api:
     def __init__(self):
@@ -15,11 +15,8 @@ class Api:
             'tags': q
         })
         # Make the request and verify success.
-        url = self.server + 'items/get?' + urllib.urlencode(args)
-        s = urllib.urlopen(url).read()
-
-        if s != "":
-            return json.loads(s)
-        else:
-            return ""
+        url = self.server + 'items/get'
+        response = requests.get(url, params= args)
+        response.raise_for_status()
+        return response.json()["items"]
 
