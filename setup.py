@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(name='python-pr0gramm-api',
       version='0.1',
@@ -8,5 +6,5 @@ setup(name='python-pr0gramm-api',
       author='David Mann',
       author_email='daaavid.mann@gmail.com',
       url='https://github.com/davidmann4/python-pr0gramm-api/',
-      packages=[],
+      packages=find_packages(),
      )
