@@ -5,7 +5,7 @@
 ##example
 
 ```python
-import pr0gramm-api 
-api = pr0gramm-api.Api()
+import pr0gramm
+api = pr0gramm.Api()
 print api.search("awww webm")["items"]
 ```
