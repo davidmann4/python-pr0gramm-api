@@ -12,7 +12,7 @@ class Api:
     def disableSFW(self):
         self.flags -= 1
 
-    def search(self, q, older=null):
+    def search(self, q, older=None):
         # Set up the arguments for the REST call.
         args = ({
             'older': older,
