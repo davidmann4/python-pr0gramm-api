@@ -1,5 +1,4 @@
+__author__ = 'Ricardo Boss <contact@ricardoboss.de>'
+__version__ = '0.5.0'
 
-__author__ = 'David Mann <daaavid.mann@gmail.com>'
-__version__ = '0.4.0'
-
-from .pr0gramm import Api
+from .api import Api
