@@ -1,15 +1,22 @@
 # python-pr0gramm-api
 
-[![Build Status](https://travis-ci.org/davidmann4/python-pr0gramm-api.svg)](https://travis-ci.org/davidmann4/python-pr0gramm-api)
+[![](https://github.com/ricardoboss/python-pr0gramm-api/workflows/Python%20Unit%20Tests/badge.svg)](https://github.com/ricardoboss/python-pr0gramm-api/actions)
 
-This Python library allows you to search for images on the image board pr0gramm.com - it contains only high quality images so you basically have a pool of high end images. Usefull for automated scripts which generate content.
+This Python library allows you to search for images on pr0gramm.com: an image board with mostly high quality images, gifs and webms.
+Feel free to fork and contribute!
 
-##example
+## Example
 
 ```python
-import pr0gramm
-api = pr0gramm.Api()
-# sfw posts are enable by default
-items = api.search("awww webm")
-print(api.info(items["id"])["tags"])
+from pr0gramm import Api
+
+# create API instance
+api = Api()
+# sfw posts are enabled by default
+
+# query posts which have the tags "awww" and "webm" and at least 100 benis
+items = api.items('! s:100 awww webm')
+
+# print the tags associated with the first post
+print(api.info(items[0]['id'])['tags'])
 ```
