@@ -9,7 +9,7 @@ This Python library allows you to search for images on the image board pr0gramm.
 ```python
 import pr0gramm
 api = pr0gramm.Api()
-api.enableSFW()
+# sfw posts are enable by default
 items = api.search("awww webm")
-print api.info(item["id"])["tags"]
+print(api.info(items["id"])["tags"])
 ```
