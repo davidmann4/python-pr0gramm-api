@@ -5,12 +5,6 @@ class Api:
     def __init__(self):
         self.server = "http://pr0gramm.com/api/"
         self.flags = 0
-
-    def enableNSFW(self):
-        self.flags += 2
-                
-    def disableNSFW(self):
-        self.flags -= 2
         
     def enableSFW(self):
         self.flags += 1
@@ -18,10 +12,10 @@ class Api:
     def disableSFW(self):
         self.flags -= 1
 
-    def search(self, q):
+    def search(self, q, older=null):
         # Set up the arguments for the REST call.
         args = ({
-            #'older': 104574,
+            'older': older,
             'flags': self.flags,
             'promoted': 1,
             'tags': q
