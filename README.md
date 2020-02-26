@@ -1,5 +1,6 @@
 # python-pr0gramm-api
 
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ricardoboss/python-pr0gramm-api) 
 [![](https://github.com/ricardoboss/python-pr0gramm-api/workflows/Python%20Unit%20Tests/badge.svg)](https://github.com/ricardoboss/python-pr0gramm-api/actions)
 
 This Python library allows you to search for images on pr0gramm.com: an image board with mostly high quality images, gifs and webms.
